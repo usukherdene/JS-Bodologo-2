@@ -290,15 +290,18 @@
 
 
 
-// let elapsed = Date.now() / 10;
-// let dooli = elapsed % 100;
-// let sec = ((elapsed - dooli) / 100) % 60;
-// let min = (((elapsed - dooli) / 100 - sec) / 60) % 60;
-// let hour = ((((elapsed - dooli) / 100 - sec) / 60 - min) / 60) % 24;
-// let day = (((((elapsed - dooli) / 100 - sec) / 60 - min) / 60 - hour) / 24) % 30;
-// let month = ((((((elapsed - dooli) / 100 - sec) / 60 - min) / 60 - hour) / 24 - day) / 30) % 12;
-// let years = ((((((elapsed - dooli) / 100 - sec) / 60 - min) / 60 - hour) / 24 - day) / 30 - month) / 12;
-// console.log(`${years} жил ${month} сар ${day} өдөр ${hour} цаг ${min} минут ${sec} секунд ${Math.floor(dooli)} дооль`);
+let elapsed = Date.now() / 10;
+let dooli = elapsed % 100;
+let sec = ((elapsed - dooli) / 100) % 60;
+let min = (((elapsed - dooli) / 100 - sec) / 60) % 60;
+let hour = ((((elapsed - dooli) / 100 - sec) / 60 - min) / 60) % 24;
+let day = (((((elapsed - dooli) / 100 - sec) / 60 - min) / 60 - hour) / 24) % 30;
+let dayuld = ((((((elapsed - dooli) / 100 - sec) / 60 - min) / 60 - hour) / 24) - day)
+let yearsuld = dayuld % 365
+let years = (dayuld - yearsuld) / 365
+let monthuld = yearsuld % 30 
+let month= (yearsuld - monthuld) / 30
+console.log(`${years} жил ${month} сар ${day} өдөр ${hour} цаг ${min} минут ${sec} секунд ${Math.floor(dooli)} дооль`);
 
 
 
@@ -315,15 +318,15 @@
 
 
 
-let a = 3
-let b = 9
-let c = 6
-if (a < b && a < c && c > b) {
-    console.log(c - a);
-}else if (a < b && a < c && b > c) {
-    console.log(b - a);
-}else if (b < c) {
-    console.log(c - b);
-}else {
-    console.log(b - c);
-}
+// let a = 3
+// let b = 9
+// let c = 6
+// if (a < b && a < c && c > b) {
+//     console.log(c - a);
+// }else if (a < b && a < c && b > c) {
+//     console.log(b - a);
+// }else if (b < c) {
+//     console.log(c - b);
+// }else {
+//     console.log(b - c);
+// }
